@@ -1,10 +1,9 @@
----
 kind: pipeline
-type: docker
 name: default
 
 steps:
-- name: greeting
-  image: busybox
-  commands:
-  - echo 'hello'
+- name: docker
+  image: plugins/docker
+  settings:
+    repo: hello
+    tag: latest
